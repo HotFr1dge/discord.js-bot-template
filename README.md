@@ -7,5 +7,5 @@ Command handler ze wsparciem dla nowych poleceń na discord.js v13
 ### Instalacja
 1.  Pobierz repozytorium
 2.  Zainstaluj wymagane pakiety poleceniem `npm i`
-3.  Umieść swój token w pliku `.env`
+3.  Zmień nazwe pliku `.env.example` na `.env` i umieść w nim swój token
 4.  Uruchom bota poleceniem `node .`
