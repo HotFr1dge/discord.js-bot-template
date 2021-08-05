@@ -1,0 +1,19 @@
+{
+  "name": "slash_commands_handler",
+  "version": "1.0.0",
+  "description": "Command and Event handler for discord.js v13 with support slash commands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HotFr1dge",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "ascii-table": "^0.0.9",
+    "discord-api-types": "^0.22.0",
+    "discord.js": "dev",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0"
+  }
+}
