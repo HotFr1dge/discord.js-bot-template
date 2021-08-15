@@ -13,13 +13,13 @@ module.exports = {
 			required: false,
 		},
 	],
-	async run(client, interaction, args) {
+	async run(client, interaction, options) {
 
-		if (!args[0]) {
+		if (!options[0]) {
 			getAll(client, interaction);
 		}
 		else {
-			getCMD(client, interaction, args[0]);
+			getCMD(client, interaction, options[0].value);
 		}
 
 	},
@@ -32,7 +32,7 @@ async function getCMD(client, interaction, input) {
 
 	if (!client.commands.has(input)) {
 		return interaction.reply({
-			embeds: [await createErrEmbed(info)],
+			embeds: [createErrEmbed(info)],
 			ephemeral: true,
 		});
 	}
@@ -43,12 +43,12 @@ async function getCMD(client, interaction, input) {
 	if (cmd.description) info += `\nOpis: \`${cmd.description}\``;
 
 	if (cmd.options) {
-		const formatedArgs = [];
+		const formatedoptions = [];
 		cmd.options.forEach(y => {
-			if (!y.required) { formatedArgs.push(`[${y.name}]`); }
-			else { formatedArgs.push(`<${y.name}>`); }
+			if (!y.required) { formatedoptions.push(`[${y.name}]`); }
+			else { formatedoptions.push(`<${y.name}>`); }
 		});
-		info += `\nArgumenty: \`${formatedArgs.join(' ')}\``;
+		info += `\nArgumenty: \`${formatedoptions.join(' ')}\``;
 		embedCmd.setFooter('Składnia: <> = wymagane, [] = opcjonalne');
 	}
 

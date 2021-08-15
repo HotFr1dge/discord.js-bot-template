@@ -6,14 +6,9 @@ module.exports = {
 		if (!interaction.isCommand()) return;
 		if (!interaction.inGuild()) return;
 
-		// Define the command parameters
-		const args = [];
-		interaction.options.data.forEach(arg => {
-			args.push(arg.value);
-		});
-
 		const cmd = interaction.commandName.toLowerCase();
 		const command = client.commands.get(cmd);
+		const options = interaction.options.data;
 
 		if (command && command.run) {
 
@@ -22,7 +17,7 @@ module.exports = {
 				return interaction
 					.reply({
 						embeds: [
-							await createErrEmbed(`❌ I am missing one of the following permissions: \`${command.clientPerms.join(', ')}\``),
+							createErrEmbed(`❌ I am missing one of the following permissions: \`${command.clientPerms.join(', ')}\``),
 						],
 						ephemeral: true,
 					});
@@ -33,14 +28,14 @@ module.exports = {
 				return interaction
 					.reply({
 						embeds: [
-							await createErrEmbed(`❌ You are missing one of the following permissions: \`${command.userPerms.join(', ')}\``),
+							createErrEmbed(`❌ You are missing one of the following permissions: \`${command.userPerms.join(', ')}\``),
 						],
 						ephemeral: true,
 					});
 			}
 
 			// Run the file
-			command.run(client, interaction, args);
+			command.run(client, interaction, options);
 		}
 
 

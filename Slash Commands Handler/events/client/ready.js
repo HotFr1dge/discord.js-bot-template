@@ -8,13 +8,21 @@ module.exports = {
 
 		const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
+		const commandsToSend = eval(JSON.stringify(client.commands));
+
+		commandsToSend.forEach(x => {
+			delete x.category;
+			delete x.userPerms;
+			delete x.clientPerms;
+		});
+
 		(async () => {
 			try {
 				console.log('Started refreshing application (/) commands.');
 
 				await rest.put(
 					Routes.applicationCommands(client.application.id),
-					{ body: client.commands },
+					{ body: commandsToSend },
 				);
 
 				console.log('Successfully reloaded application (/) commands.');
