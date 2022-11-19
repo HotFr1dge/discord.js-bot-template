@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
 	category: 'informacyjne',
@@ -6,8 +6,8 @@ module.exports = {
 	description: 'Wysyła wiadomość z pomocymi informacjami',
 	async run(client, interaction, options) {
 
-		const embed = new MessageEmbed()
-			.setAuthor(`${client.user.username} - POMOC`, client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 2048 }))
+		const embed = new EmbedBuilder()
+			.setAuthor({ name: `${client.user.username} - POMOC`, iconURL: client.user.displayAvatarURL({ format: 'png', dynamic: true, size: 2048 })})
 			.setColor(process.env.FLUENT_RED)
 			.setDescription(`
 				Aby zobaczyć listę wszystkich kommend użyj \`/commands\`\n

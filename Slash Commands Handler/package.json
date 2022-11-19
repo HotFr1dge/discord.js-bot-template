@@ -9,11 +9,8 @@
   "author": "HotFr1dge",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/rest": "^0.1.0-canary.0",
     "ascii-table": "^0.0.9",
-    "discord-api-types": "^0.22.0",
-    "discord.js": "^13.0.0",
-    "dotenv": "^10.0.0",
-    "eslint": "^7.32.0"
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
   }
 }

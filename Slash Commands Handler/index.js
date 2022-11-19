@@ -2,13 +2,13 @@
 require('dotenv').config();
 
 // Intantiate a discord.Client
-const { Client, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
 const client = new Client({
 	allowedMentions: {
 		parse: ['users', 'roles'],
 		repliedUser: false,
 	},
-	intents: ['GUILD_MESSAGES', 'GUILDS'],
+	intents: [512, 1],
 });
 
 // Load the command and events

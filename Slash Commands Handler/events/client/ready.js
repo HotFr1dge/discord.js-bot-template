@@ -3,8 +3,7 @@ module.exports = {
 		console.log('Bot is Ready!');
 
 		// Send commands data to Discord API
-		const { REST } = require('@discordjs/rest');
-		const { Routes } = require('discord-api-types/v9');
+		const { REST, Routes } = require('discord.js');
 
 		const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
@@ -25,15 +24,15 @@ module.exports = {
 					{ body: commandsToSend },
 				);
 
-				console.log('Successfully reloaded application (/) commands.');
+				console.log('\x1b[32m', 'Successfully reloaded application (/) commands.', '\x1b[0m');
 			}
 			catch (error) {
 				console.error(error);
 			}
 		})();
 
-		// for tests
-		client.api.applications(client.user.id).commands.get().then(console.log);
+		// for tests - Prints list of registered commands
+		client.application.commands.fetch().then(res => console.log('\x1b[34m', `Registered commands: ${res.map(x => x.name).join(', ')}`, '\x1b[0m'));
 
 	},
 };
