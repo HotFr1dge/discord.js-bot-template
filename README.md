@@ -1,15 +1,12 @@
-# Slash Commands Handler
+# Discord.js Bot template with slash commands handler
 
-Command handler ze wsparciem dla nowych poleceń na discord.js ~~v13~~ v14
+Template inculdes commands and event handler with support for `/` commands in discord.js v14.
 
-*Dokumentacja discord.js: https://discord.js.org/#/docs/main/master/general/welcome*
+*Discord.js Docs: https://discord.js.org/#/docs/main/master/general/welcome*
+*Changes in v14 : https://discordjs.guide/additional-info/changes-in-v14.html*
 
-~~*Przewodnik aktualizacji bota z v12 na v13: https://discordjs.guide/additional-info/changes-in-v13.html*~~
-
-*Przewodnik aktualizacji bota z v13 na v14: https://discordjs.guide/additional-info/changes-in-v14.html*
-
-### Instalacja
-1.  Pobierz repozytorium
-2.  Zainstaluj wymagane pakiety poleceniem `npm i`
-3.  Zmień nazwe pliku `.env.example` na `.env` i umieść w nim swój token
-4.  Uruchom bota poleceniem `node .`
+### Instalation
+1.  Clone repository
+2.  Install all requre modules - `npm i`
+3.  Fill `.env.example` with your token and change filename to `.env`
+4.  Run bot - `node .`
