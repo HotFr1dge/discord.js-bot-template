@@ -3,6 +3,7 @@
 Template inculdes commands and event handler with support for `/` commands in discord.js v14.
 
 *Discord.js Docs: https://discord.js.org/#/docs/main/master/general/welcome*
+
 *Changes in v14 : https://discordjs.guide/additional-info/changes-in-v14.html*
 
 ### Instalation
