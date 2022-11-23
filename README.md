@@ -1,6 +1,6 @@
 # Discord.js Bot template with slash commands handler
 
-Template inculdes commands and event handler with support for `/` commands in discord.js v14.
+Template inculdes command and event handler with support for `/` commands in discord.js v14.
 
 *Discord.js Docs: https://discord.js.org/#/docs/main/master/general/welcome*
 
