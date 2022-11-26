@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 // Intantiate a discord.Client
-const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
+const { Client, Collection } = require('discord.js');
 const client = new Client({
 	allowedMentions: {
 		parse: ['users', 'roles'],
